@@ -1,4 +1,5 @@
 import { defineConfig, loadEnv } from "vite";
+import AgenticReact from '@agentic-react/vite';
 import path from "path";
 
 // https://vitejs.dev/config/
@@ -7,6 +8,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     root: ".",
+    plugins: [AgenticReact()],
     build: {
       outDir: "web",
       rollupOptions: {
