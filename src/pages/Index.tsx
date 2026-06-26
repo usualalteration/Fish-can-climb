@@ -54,12 +54,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-
-          <div className="animate-in fade-in duration-1000 delay-500">
-            <p className="text-blue-600/60 italic">
-              "maybe the problem wasn't the fish"
-            </p>
-          </div>
         </div>
       </div>
     </div>
