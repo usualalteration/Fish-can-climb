@@ -1,45 +1,65 @@
+import { Link } from "react-router-dom";
+
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-background via-background to-muted">
-      <div className="w-full max-w-md px-6">
-        <div className="flex flex-col items-center space-y-8">
-          {/* Logo */}
-          <div className="animate-in fade-in zoom-in duration-500">
-            <img
-              src="/trustable.png"
-              alt="Trustable Logo"
-              className="h-24 w-auto"
-            />
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-white via-sky-100 to-sky-200 p-4">
+      <div className="w-full max-w-2xl text-center">
+        <div className="space-y-8">
+          <div className="space-y-4 animate-in fade-in zoom-in duration-700">
+            <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-500">
+              Fish Can Climb
+            </h1>
+            <p className="text-xl text-blue-700 italic">
+              "Some limits exist only because we believe them."
+            </p>
           </div>
 
-          {/* Welcome Card */}
-          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
-            <div className="rounded-2xl border bg-card p-8 shadow-elegant">
-              <h1 className="mb-2 text-2xl font-bold text-foreground">
-                Welcome
-              </h1>
-              <p className="mb-6 text-muted-foreground">
-                Try the following prompts to start
-              </p>
+          <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+            <div className="rounded-2xl border border-blue-300 bg-white/80 backdrop-blur-sm p-8 shadow-2xl">
+              <div className="space-y-6">
+                <p className="text-lg text-slate-700">
+                  A vertical endless runner where a fish climbs an infinite tree trunk. 
+                  Avoid rocks 🪨 and collect stars ⭐ to score points!
+                </p>
 
-              <ul className="space-y-3 text-base text-foreground">
-                <li>✅ Change the home page in a Todo list</li>
-                <li>📒 Change the home page in an Address book</li>
-                <li>⏱️ Change the home page in a Pomodoro timer</li>
-                <li>🧮 Change the home page in an Unit converter</li>
-              </ul>
+                <div className="grid grid-cols-2 gap-4 text-left">
+                  <div className="rounded-lg bg-blue-100 p-4">
+                    <h3 className="font-bold text-blue-700 mb-2">Controls</h3>
+                    <div className="space-y-1 text-sm text-slate-700">
+                      <p>↑ ↓ Vertical movement</p>
+                      <p>← → Lateral shift</p>
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-sky-100 p-4">
+                    <h3 className="font-bold text-sky-700 mb-2">Goal</h3>
+                    <div className="space-y-1 text-sm text-slate-700">
+                      <p>Collect stars ⭐</p>
+                      <p>Avoid rocks 🪨</p>
+                    </div>
+                  </div>
+                </div>
+
+                <Link
+                  to="/game"
+                  className="block w-full max-w-xs mx-auto"
+                >
+                  <button className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white text-xl font-bold rounded-lg shadow-lg transition-all transform hover:scale-105 active:scale-95">
+                    Play Now
+                  </button>
+                </Link>
+
+                <p className="text-sm text-slate-500/70 mt-4">
+                  Desktop-first · Responsive · Emoji-based graphics
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Info Text */}
-          <p className="animate-in fade-in duration-1000 delay-300 text-center text-sm text-muted-foreground">
-            Powered by Trustable
-          </p>
-
-          {/* Upcoming Features */}
-          <p className="animate-in fade-in duration-1000 delay-500 text-center text-xs text-muted-foreground/70 max-w-sm">
-            Upcoming in next releases: full support for AI, databases (SQL, NoSQL, vector), Redis and S3 with serverless backend
-          </p>
+          <div className="animate-in fade-in duration-1000 delay-500">
+            <p className="text-blue-600/60 italic">
+              "maybe the problem wasn't the fish"
+            </p>
+          </div>
         </div>
       </div>
     </div>

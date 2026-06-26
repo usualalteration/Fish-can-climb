@@ -1,0 +1,65 @@
+{
+  "mcpServers": {
+    "milvus": {
+      "args": [
+        "--milvus-token",
+        "trureact:YopOKFQn4ynx",
+        "--milvus-db",
+        "trureact",
+        "--milvus-uri",
+        "http://nuvolaris-milvus.nuvolaris.svc.cluster.local:19530"
+      ],
+      "command": "mcp-server-milvus",
+      "env": {
+        "MILVUS_URI": "http://nuvolaris-milvus.nuvolaris.svc.cluster.local:19530"
+      },
+      "type": "stdio"
+    },
+    "openserverless": {
+      "args": [],
+      "command": "openserverless-mcp",
+      "type": "stdio"
+    },
+    "postgres": {
+      "args": [
+        "--access-mode=unrestricted"
+      ],
+      "command": "postgres-mcp",
+      "env": {
+        "DATABASE_URI": "postgresql://trureact:0laHv2loqprv@nuvolaris-postgres.nuvolaris.svc.cluster.local:5432/trureact"
+      },
+      "type": "stdio"
+    },
+    "redis": {
+      "args": [
+        "--host",
+        "redis",
+        "--port",
+        "6379",
+        "--username",
+        "trureact",
+        "--password",
+        "LovZyFrHbe6H"
+      ],
+      "command": "redis-mcp-server",
+      "env": {
+        "REDIS_HOST": "redis",
+        "REDIS_PORT": "6379",
+        "REDIS_PWD": "LovZyFrHbe6H",
+        "REDIS_USERNAME": "trureact"
+      },
+      "type": "stdio"
+    },
+    "s3": {
+      "args": [],
+      "command": "mcp-s3",
+      "env": {
+        "AWS_ACCESS_KEY_ID": "trureact",
+        "AWS_SECRET_ACCESS_KEY": "gLRMWWEXluYK3mf61wfMWBVLxBOs2wjLLVdtOxYB",
+        "S3_ENDPOINT": "http://seaweedfs.nuvolaris.svc.cluster.local:9000",
+        "S3_USE_PATH_STYLE": "true"
+      },
+      "type": "stdio"
+    }
+  }
+}
